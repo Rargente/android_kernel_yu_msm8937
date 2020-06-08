@@ -529,4 +529,3 @@
 	qcom,cci-clk-src = <37500000>;
 	status = "ok";
 };
-
