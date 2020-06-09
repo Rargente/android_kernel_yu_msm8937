@@ -42,7 +42,8 @@ static int msm_pm_tz_boot_init(void)
 			flag = SCM_FLAG_WARMBOOT_CPU0 | SCM_FLAG_WARMBOOT_CPU1 |
 				SCM_FLAG_WARMBOOT_CPU2 | SCM_FLAG_WARMBOOT_CPU3;
 		else
-			__WARN();
+			pr_warn("%s: set warmboot address failed\n",
+					__func__);
 
 		return scm_set_boot_addr(virt_to_phys(msm_pm_boot_entry), flag);
 	}
